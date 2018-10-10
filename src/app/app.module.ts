@@ -10,25 +10,39 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { TreePage } from '../pages/tree/tree';
+import { FourPage } from '../pages/four/four';
+import { TwoPage } from '../pages/two/two';
+import { HttpModule } from '@angular/http';
+import { FivePage } from '../pages/five/five';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
+    TwoPage,
+    TreePage,
+    FourPage,
+    FivePage,
     TabsPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp,{
+      tabsPlacement:'top',
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
     ContactPage,
     HomePage,
+    TwoPage,
+    TreePage,
+    FourPage,
+    FivePage,
     TabsPage
   ],
   providers: [

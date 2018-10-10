@@ -8,10 +8,35 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
+
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+      <ion-label floating>ชื่อ</ion-label>
+      <ion-input [(ngModel)]="name" type="text" ></ion-input>
     </ion-item>
-  </ion-list>
+  
+    <ion-item>
+      <ion-label floating>หัวข้อเรื่อง</ion-label>
+      <ion-input [(ngModel)]="subject" type="text" ></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>รายละเอียด</ion-label>
+      <ion-textarea [(ngModel)]="detail" type="text" ></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>อีเมล</ion-label>
+      <ion-input [(ngModel)]="email" type="email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>เบอร์โทรศัพท์</ion-label>
+      <ion-input [(ngModel)]="tel" type="number" ></ion-input>
+    </ion-item>
+
+  <ion-item>
+    <button ion-button (click)="getContact()">ok</button>
+  </ion-item>
+
+</ion-list>
 </ion-content>
