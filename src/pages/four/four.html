@@ -15,7 +15,7 @@
     <ion-title>ท่องเที่ยว</ion-title>
     <ion-buttons right>
         <button class="ioc">
-          <ion-icon name="search"></ion-icon>
+          <ion-icon name="share"></ion-icon>
         </button>
       </ion-buttons>
   </ion-navbar>
@@ -25,13 +25,14 @@
 
 <ion-content>
     <ion-list>
-        <ion-item>
+        <ion-item *ngFor="let T of datalistTour">
           <ion-thumbnail item-start>
-            <img src="img/thumbnail-totoro.png">
+              <img src="http://192.168.1.25/{{T.t_img}}"/>
           </ion-thumbnail>
-          <h2>My Neighbor Totoro</h2>
-          <p>Hayao Miyazaki • 1988</p>
-          <button ion-button clear item-end>View</button>
+          <h2>{{T.t_name}}</h2>
+          <p>{{T.t_description}}</p>
+          <p>{{T.timesave}}</p>
+          <button ion-button clear item-end (click)="goDetailtour(T)">View</button>
         </ion-item>
       </ion-list>
 </ion-content>

@@ -20,8 +20,8 @@ export class ContactPage {
   getContact(){
     let headers = new Headers({'Content-Type':'application/json'});
     let options = new ResponseOptions({headers:headers});
-    let body = {name:this.name,subject:this.subject,detail:this.detail,eamil:this.email,tel:this.tel}; 
-    this.http.post('http://localhost/apps/getContact.php',body,options)
+    let body = {name:this.name,subject:this.subject,detail:this.detail,email:this.email,tel:this.tel}; 
+    this.http.post('http://localhost/apps/setContact.php',body,options)
     .subscribe(
       data=>{
         console.log("success");

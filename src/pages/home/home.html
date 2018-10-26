@@ -8,7 +8,7 @@
     <ion-title>ข่าวสาร</ion-title>
     <ion-buttons right>
       <button class="ioc">
-        <ion-icon name="search"></ion-icon>
+        <ion-icon name="send" (click)="goContact()"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -31,14 +31,14 @@
     </div>
       <ion-list >
           <ion-list-header>อัพเดทข่าว</ion-list-header>
-          <ion-item *ngFor="let n of datalist">
+          <ion-item  *ngFor="let n of datalist">
               <ion-thumbnail item-start>
-                  <img src="http://localhost/{{n.n_img}}"/>
+                  <img src="http://192.168.1.25/{{n.n_img}}"/>
                 </ion-thumbnail>
                 <h2>{{n.n_name}}</h2>
                 <p>{{n.n_description}}</p>
                 <p>{{n.timesave}}</p>
-                <button ion-button clear item-end>View</button>
+                <button ion-button clear item-end (click)="goDetail(n)">View</button>
           </ion-item>
         </ion-list>
 </ion-content>

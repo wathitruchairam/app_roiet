@@ -1,0 +1,30 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+<ion-content  style="font-family: 'Athiti', sans-serif;">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1>
+        
+      </ion-col>
+      <ion-col col-10>
+          <h3>สถานแสดงพันธุ์สัตว์น้ําร้อยเอ็ด</h3><br>
+        <div class="form">
+        <input class="form-control"  type="email"  placeholder="อีเมล"  [(ngModel)]="u_email">
+        </div>
+        <div class="form">
+        <input class="form-control"  type="password"  placeholder="รหัสผ่าน" [(ngModel)]="u_password">
+        </div>
+        <button ion-button color="secondary"  type="button" class="btn btn-outline btn-warning btn-md btn-block" (click)="getLogin()">เข้าสู่ระบบ</button><br>
+        <p>ยังไม่มีบัญชีผู้ใช้?<strong><a href="#">สมัครเลย</a></strong></p>
+      </ion-col>
+      <ion-col col-1>
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

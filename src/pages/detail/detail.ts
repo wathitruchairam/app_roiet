@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the TwoPage page.
+ * Generated class for the DetailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-two',
-  templateUrl: 'two.html',
+  selector: 'page-detail',
+  templateUrl: 'detail.html',
 })
-export class TwoPage {
+export class DetailPage {
+  listdetail:Array<any>;
+  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-   
+    this.listdetail = this.navParams.get("item");
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TwoPage');
+    console.log('ionViewDidLoad DetailPage');
   }
-  
+
 }

@@ -1,41 +1,36 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="app">
     <ion-title>
       Contact
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
   <ion-list>
 
     <ion-item>
-      <ion-label floating>ชื่อ</ion-label>
-      <ion-input [(ngModel)]="name" type="text" ></ion-input>
+      <ion-input [(ngModel)]="name" type="text" placeholder="ชื่อ" ></ion-input>
     </ion-item>
   
     <ion-item>
-      <ion-label floating>หัวข้อเรื่อง</ion-label>
-      <ion-input [(ngModel)]="subject" type="text" ></ion-input>
+      <ion-input [(ngModel)]="subject" type="text" placeholder="หัวข้อเรื่อง" ></ion-input>
     </ion-item>
   
     <ion-item>
-      <ion-label floating>รายละเอียด</ion-label>
-      <ion-textarea [(ngModel)]="detail" type="text" ></ion-textarea>
+      <ion-textarea [(ngModel)]="detail" type="text" placeholder="รายละเอียด" ></ion-textarea>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>อีเมล</ion-label>
-      <ion-input [(ngModel)]="email" type="email" ></ion-input>
+      <ion-input [(ngModel)]="email" type="email" placeholder="อีเมล" ></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>เบอร์โทรศัพท์</ion-label>
-      <ion-input [(ngModel)]="tel" type="number" ></ion-input>
+      <ion-input [(ngModel)]="tel" type="number" placeholder="เบอร์โทรศัพท์" ></ion-input>
     </ion-item>
 
   <ion-item>
-    <button ion-button (click)="getContact()">ok</button>
+    <button ion-button large (click)="getContact()">ส่งข้อความ</button>
   </ion-item>
 
 </ion-list>
